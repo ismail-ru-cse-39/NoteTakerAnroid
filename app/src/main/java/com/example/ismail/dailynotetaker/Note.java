@@ -2,6 +2,7 @@ package com.example.ismail.dailynotetaker;
 
 import android.content.Context;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -9,13 +10,13 @@ import java.util.TimeZone;
 /**
  * Created by Ismail on 7/20/2018.
  */
-public class Note {
+public class Note implements Serializable {
 
     private long mDateTime;
     private String mTitle;
     private String mContent;
 
-    public Note(String mContent, long mDateTime, String mTitle) {
+    public Note( long mDateTime, String mTitle, String mContent) {
         this.mContent = mContent;
         this.mDateTime = mDateTime;
         this.mTitle = mTitle;
